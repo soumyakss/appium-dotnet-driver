@@ -15,7 +15,7 @@ using System;
 
 namespace OpenQA.Selenium.Appium
 {
-    public class AppiumDriverCommand
+    public partial class AppiumDriverCommand
     {
         #region Appium Specific extensions to JSONWP Commands
 

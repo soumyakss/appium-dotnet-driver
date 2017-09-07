@@ -51,6 +51,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appium\Actions\Actions.cs" />
+    <Compile Include="Appium\Actions\AppiumDriver.cs" />
+    <Compile Include="Appium\Actions\AppiumDriverCommand.cs" />
+    <Compile Include="Appium\Actions\Enums\InputActionSubtype.cs" />
+    <Compile Include="Appium\Actions\Enums\InputSourceType.cs" />
+    <Compile Include="Appium\Actions\Enums\MouseButton.cs" />
+    <Compile Include="Appium\Actions\Enums\Origin.cs" />
+    <Compile Include="Appium\Actions\Enums\PenButton.cs" />
+    <Compile Include="Appium\Actions\Enums\PenTip.cs" />
+    <Compile Include="Appium\Actions\Enums\PointerType.cs" />
+    <Compile Include="Appium\Actions\Interfaces\IActions.cs" />
+    <Compile Include="Appium\Actions\Interfaces\IActionsPerformer.cs" />
+    <Compile Include="Appium\Actions\Interfaces\IInputAction.cs" />
+    <Compile Include="Appium\Actions\Interfaces\IInputSource.cs" />
+    <Compile Include="Appium\Actions\Models\BaseInputAction.cs" />
+    <Compile Include="Appium\Actions\Models\BaseInputSource.cs" />
+    <Compile Include="Appium\Actions\Models\InputSourceParameters.cs" />
+    <Compile Include="Appium\Actions\Models\KeyAction.cs" />
+    <Compile Include="Appium\Actions\Models\KeyInputSource.cs" />
+    <Compile Include="Appium\Actions\Models\NullInputSource.cs" />
+    <Compile Include="Appium\Actions\Models\PauseAction.cs" />
+    <Compile Include="Appium\Actions\Models\PenAction.cs" />
+    <Compile Include="Appium\Actions\Models\PointerAction.cs" />
+    <Compile Include="Appium\Actions\Models\PointerInputSource.cs" />
+    <Compile Include="Appium\Actions\VirtualKeyboard.cs" />
+    <Compile Include="Appium\Actions\VirtualMouse.cs" />
+    <Compile Include="Appium\Actions\VirtualPen.cs" />
+    <Compile Include="Appium\Actions\VirtualTouch.cs" />
     <Compile Include="Appium\Android\AndroidCommandExecutionHelper.cs" />
     <Compile Include="Appium\Android\AndroidDriver.cs" />
     <Compile Include="Appium\Android\AndroidElement.cs" />

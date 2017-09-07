@@ -28,7 +28,7 @@ using System.Linq;
 
 namespace OpenQA.Selenium.Appium
 {
-    public abstract class AppiumDriver<W> : RemoteWebDriver, IExecuteMethod, ITouchShortcuts, IFindsByFluentSelector<W>, IFindByAccessibilityId<W>,
+    public abstract partial class AppiumDriver<W> : RemoteWebDriver, IExecuteMethod, ITouchShortcuts, IFindsByFluentSelector<W>, IFindByAccessibilityId<W>,
         IHidesKeyboard, IInteractsWithFiles,
         IInteractsWithApps, IPerformsTouchActions, IRotatable, IContextAware, IGenericSearchContext<W>, IGenericFindsByClassName<W>,
         IGenericFindsById<W>, IGenericFindsByCssSelector<W>, IGenericFindsByLinkText<W>, IGenericFindsByName<W>,
