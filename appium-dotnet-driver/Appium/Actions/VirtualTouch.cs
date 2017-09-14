@@ -58,19 +58,31 @@ namespace OpenQA.Selenium.Appium.Actions
         #region MoveTo
         public VirtualTouch MoveTo(IWebElement element)
         {
-            PointerMove(element, null, null);
+            PointerMove(element, null, null, null, null);
             return this;
         }
 
         public VirtualTouch MoveTo(IWebElement element, double? xOffset, double? yOffset)
         {
-            PointerMove(element, xOffset, yOffset);
+            PointerMove(element, xOffset, yOffset, null, null);
+            return this;
+        }
+
+        public VirtualTouch MoveTo(IWebElement element, double? xOffset, double? yOffset, double? xSpeed, double? ySpeed)
+        {
+            PointerMove(element, xOffset, yOffset, xSpeed, ySpeed);
             return this;
         }
 
         public VirtualTouch MoveTo(double? x, double? y, Origin? origin = null)
         {
-            PointerMove(x, y, origin);
+            PointerMove(x, y, null, null, origin);
+            return this;
+        }
+
+        public VirtualTouch MoveTo(double? x, double? y, double? xSpeed, double? ySpeed, Origin? origin = null)
+        {
+            PointerMove(x, y, xSpeed, ySpeed, origin);
             return this;
         }
         #endregion

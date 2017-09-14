@@ -34,21 +34,26 @@ namespace OpenQA.Selenium.Appium.Actions.Models
             Actions.Add(new PointerAction(InputActionSubtype.PointerUp));
         }
 
-        protected void PointerMove(IWebElement element, double? xOffset, double? yOffset)
+        protected void PointerMove(IWebElement element, double? xOffset, double? yOffset, double? xSpeed, double? ySpeed)
         {
             Actions.Add(new PointerAction(InputActionSubtype.PointerMove)
             {
                 Element = element,
                 XOffset = xOffset,
-                YOffset = yOffset
+                YOffset = yOffset,
+                XSpeed = xSpeed,
+                YSpeed = ySpeed
             });
         }
-        protected void PointerMove(double? x, double? y, Origin? origin)
+
+        protected void PointerMove(double? x, double? y, double? xSpeed, double? ySpeed, Origin? origin)
         {
             Actions.Add(new PointerAction(InputActionSubtype.PointerMove)
             {
                 X = x,
                 Y = y,
+                XSpeed = xSpeed,
+                YSpeed = ySpeed,
                 Origin = origin
             });
         }

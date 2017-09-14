@@ -58,19 +58,19 @@ namespace OpenQA.Selenium.Appium.Actions
         #region MoveTo
         public VirtualMouse MoveTo(IWebElement element)
         {
-            PointerMove(element, null, null);
+            PointerMove(element, null, null, null, null);
             return this;
         }
 
         public VirtualMouse MoveTo(IWebElement element, double? xOffset, double? yOffset)
         {
-            PointerMove(element, xOffset, yOffset);
+            PointerMove(element, xOffset, yOffset, null, null);
             return this;
         }
 
         public VirtualMouse MoveTo(double? x, double? y, Origin? origin = null)
         {
-            PointerMove(x, y, origin);
+            PointerMove(x, y, null, null, origin);
             return this;
         }
         #endregion

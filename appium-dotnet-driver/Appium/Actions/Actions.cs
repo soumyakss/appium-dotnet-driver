@@ -35,22 +35,6 @@ namespace OpenQA.Selenium.Appium.Actions
             {
                 { "sources", json }
             };
-
-
-            //var sourceParameters = new List<Dictionary<string, object>>();
-            //foreach (var source in this)
-            //{
-            //    sourceParameters.Add(source.GetParameters());
-            //}
-
-
-
-
-
-            //return new Dictionary<string, object>()
-            //{
-            //    { "sources", sourceParameters }
-            //};
         }
 
         public void Perform(IActionsPerformer actionsPerformer)

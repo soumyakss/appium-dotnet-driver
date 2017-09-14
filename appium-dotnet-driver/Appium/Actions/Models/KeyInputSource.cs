@@ -6,7 +6,7 @@ namespace OpenQA.Selenium.Appium.Actions.Models
     {
         public override InputSourceType Type => InputSourceType.Key;
 
-        public void KeyDown(string[] keys)
+        protected void KeyDown(string[] keys)
         {
             Actions.Add(new KeyAction(InputActionSubtype.KeyDown)
             {
@@ -14,7 +14,7 @@ namespace OpenQA.Selenium.Appium.Actions.Models
             });
         }
 
-        public void KeyUp(string[] keys)
+        protected void KeyUp(string[] keys)
         {
             Actions.Add(new KeyAction(InputActionSubtype.KeyUp)
             {

@@ -58,13 +58,19 @@ namespace OpenQA.Selenium.Appium.Actions
         #region MoveTo
         public VirtualPen MoveTo(IWebElement element)
         {
-            PointerMove(element, null, null);
+            PointerMove(element, null, null, null, null);
+            return this;
+        }
+
+        public VirtualPen MoveTo(IWebElement element)
+        {
+            PointerMove(element, null, null, null, null);
             return this;
         }
 
         public VirtualPen MoveTo(IWebElement element, double? xOffset, double? yOffset)
         {
-            PointerMove(element, xOffset, yOffset);
+            PointerMove(element, xOffset, yOffset, null, null);
             return this;
         }
 
