@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Serialization;
 using OpenQA.Selenium.Appium.Actions.Enums;
 using OpenQA.Selenium.Appium.Actions.Interfaces;
 using System.Collections.Generic;
@@ -18,18 +17,10 @@ namespace OpenQA.Selenium.Appium.Actions.Models
         [JsonConverter(typeof(StringEnumConverter), true)]
         public abstract InputSourceType Type { get; }
 
-        public Dictionary<string, object> GetParameters()
+        public BaseInputSource()
         {
-            var sourceParameters = new List<Dictionary<string, object>>();
-            foreach (var action in Actions)
-            {
-                //sourceParameters.Add(action);
-            }
-
-            return new Dictionary<string, object>()
-            {
-                { "actions", sourceParameters }
-            };
+            Actions = new List<IInputAction>();
+            Parameters = new InputSourceParameters();
         }
 
         public void Pause(double? duration = null)
@@ -38,18 +29,6 @@ namespace OpenQA.Selenium.Appium.Actions.Models
             {
                 Duration = duration
             });
-        }
-
-        public void Perform(IActionsPerformer actionsPerformer)
-        {
-            var settings = new JsonSerializerSettings
-            {
-                ContractResolver = new CamelCasePropertyNamesContractResolver(),
-                NullValueHandling = NullValueHandling.Ignore
-            };
-
-            var json = JsonConvert.SerializeObject(this, settings);
-            System.Diagnostics.Debug.WriteLine(json);
         }
     }
 }

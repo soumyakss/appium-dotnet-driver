@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium.Appium.Actions.Enums;
-using OpenQA.Selenium.Appium.Actions.Models;
 using System.Collections.Generic;
 
 namespace OpenQA.Selenium.Appium.Actions.Interfaces
@@ -10,12 +9,6 @@ namespace OpenQA.Selenium.Appium.Actions.Interfaces
 
         InputSourceType Type { get; }
 
-        //InputSourceParameters Parameters { get; }
-
         IList<IInputAction> Actions { get; }
-
-        Dictionary<string, object> GetParameters();
-
-        void Perform(IActionsPerformer actionsPerformer);
     }
 }

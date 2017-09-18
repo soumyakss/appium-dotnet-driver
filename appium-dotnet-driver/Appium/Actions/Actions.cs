@@ -1,9 +1,8 @@
-﻿using OpenQA.Selenium.Appium.Actions.Interfaces;
-using System.Collections.Generic;
-using System;
-using System.Linq;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using OpenQA.Selenium.Appium.Actions.Interfaces;
+using System;
+using System.Collections.Generic;
 
 namespace OpenQA.Selenium.Appium.Actions
 {
@@ -29,7 +28,6 @@ namespace OpenQA.Selenium.Appium.Actions
             };
 
             var json = JsonConvert.SerializeObject(this, settings);
-            System.Diagnostics.Debug.WriteLine(json);
 
             return new Dictionary<string, object>()
             {
