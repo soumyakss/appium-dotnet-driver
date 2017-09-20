@@ -2,8 +2,11 @@
 {
     public enum InputSourceType
     {
+        // Standard
         None,
         Key,
-        Pointer
+        Pointer,
+        // Custom
+        Dial
     }
 }
