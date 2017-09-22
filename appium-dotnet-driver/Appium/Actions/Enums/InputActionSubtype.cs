@@ -10,6 +10,7 @@
         PointerMove,
         PointerCancel,
         SetAngle,
-        SetPressure
+        SetPressure,
+        SetPlacement
     }
 }

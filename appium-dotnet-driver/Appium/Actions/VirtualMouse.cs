@@ -68,9 +68,21 @@ namespace OpenQA.Selenium.Appium.Actions
             return this;
         }
 
+        public VirtualMouse MoveTo(IWebElement element, double? xOffset, double? yOffset, double? xSpeed, double? ySpeed)
+        {
+            PointerMove(element, xOffset, yOffset, xSpeed, ySpeed);
+            return this;
+        }
+
         public VirtualMouse MoveTo(double? x, double? y, Origin? origin = null)
         {
             PointerMove(x, y, null, null, origin);
+            return this;
+        }
+
+        public VirtualMouse MoveTo(double? x, double? y, double? xSpeed, double? ySpeed, Origin? origin = null)
+        {
+            PointerMove(x, y, xSpeed, ySpeed, origin);
             return this;
         }
         #endregion
