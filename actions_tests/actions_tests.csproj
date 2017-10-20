@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KeyboardActionsTest.cs" />
     <Compile Include="TestBase.cs" />
     <Compile Include="ActionsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
